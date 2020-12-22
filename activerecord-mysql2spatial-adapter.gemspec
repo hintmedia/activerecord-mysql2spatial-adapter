@@ -20,18 +20,6 @@ Gem::Specification.new do |s|
   s.summary = "An ActiveRecord adapter for MySQL Spatial Extensions, based on RGeo and the mysql2 gem."
   s.test_files = ["test/tc_spatial_queries.rb", "test/tc_basic.rb"]
 
-  if s.respond_to? :specification_version then
-    s.specification_version = 4
-
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<rgeo-activerecord>, ["~> 5.1"])
-      s.add_runtime_dependency(%q<mysql2>, [">= 0.4.4"])
-    else
-      s.add_dependency(%q<rgeo-activerecord>, ["~> 2.0"])
-      s.add_dependency(%q<mysql2>, [">= 0.2.13"])
-    end
-  else
-    s.add_dependency(%q<rgeo-activerecord>, ["~> 2.0"])
-    s.add_dependency(%q<mysql2>, [">= 0.2.13"])
-  end
+  s.add_dependency(%q<rgeo-activerecord>, ["~> 5.0"])
+  s.add_dependency(%q<mysql2>, [">= 0.2.13"])
 end
